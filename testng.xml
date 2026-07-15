@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Suite">
+    <listeners>
+        <listener class-name="com.orangehrm.utils.ExtentTestNGListener" />
+    </listeners>
+
+    <test name="Login Test">
+        <classes>
+            <class name="com.orangehrm.tests.LoginTest"/>
+            <class name="com.orangehrm.tests.DashboardTest"/>
+            <class name="com.orangehrm.tests.LeaveTest"/>
+        </classes>
+    </test>
+</suite>
