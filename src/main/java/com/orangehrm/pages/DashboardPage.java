@@ -30,7 +30,13 @@ public class DashboardPage {
     @FindBy(xpath = "//span[text()='Leave']")
     private WebElement leaveMenu;
     
+    @FindBy(xpath = "//span[text()='PIM']")
+    private WebElement pimMenu;
+    
+    
     // Actions
+   
+    
     public String getWelcomeMessageText() {
         return welcomeMessage.getText();
     }
@@ -51,5 +57,12 @@ public class DashboardPage {
 
         return new LeavePage(driver);
     }
+    
+    
+    public PIMPage clickPIMMenu() {
+        pimMenu.click();
+        return new PIMPage(driver);
+    }
   
+   
 }
