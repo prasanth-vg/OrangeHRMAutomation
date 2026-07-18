@@ -14,7 +14,8 @@ public class DriverManager {
     public static WebDriver getDriver() {
         if (driver == null) {
 
-            WebDriverManager.chromedriver().setup();
+          //  WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().browserVersion("150").setup();
 
             ChromeOptions options = new ChromeOptions();
 
