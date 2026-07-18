@@ -36,8 +36,15 @@ public class LeavePage {
     }
 
     public void navigateToLeaveList() {
-        WaitUtils.waitForClickability(driver, leaveListMenu, 10);
+                
+        WaitUtils.waitForVisibility(driver, leaveListMenu, 20);
+
+        System.out.println("Leave List visible: " + leaveListMenu.isDisplayed());
+
+        WaitUtils.waitForClickability(driver, leaveListMenu, 20);
+
         leaveListMenu.click();
+        
     }
 
     public void clickApplyButton() {

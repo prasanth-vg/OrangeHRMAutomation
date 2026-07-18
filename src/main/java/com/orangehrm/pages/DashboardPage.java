@@ -51,11 +51,19 @@ public class DashboardPage {
         return dashboardHeader.getText();
     }
     
+       
+    
     public LeavePage clickLeaveMenu() {
 
+        WaitUtils.waitForClickability(driver, leaveMenu, 10);
         leaveMenu.click();
 
-        return new LeavePage(driver);
+        LeavePage leavePage = new LeavePage(driver);
+
+        // Wait until Leave page header is visible
+        leavePage.getLeaveHeader();
+
+        return leavePage;
     }
     
     
